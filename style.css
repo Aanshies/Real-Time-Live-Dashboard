@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s, color 0.5s;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff4ecb, #9e00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select, input, button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+input, select {
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+button {
+  background: linear-gradient(135deg, #ff4ecb, #9e00ff);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 15px rgba(255, 78, 203, 0.5);
+}
+
+.light {
+  background: #fff0f8;
+  color: #333;
+}
+
+.dark {
+  background: #1a001f;
+  color: #f0f0f0;
+}
+
+canvas {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  max-width: 100%;
+  margin-top: 20px;
+  transition: box-shadow 0.3s;
+}
+
+canvas.update-pulse {
+  box-shadow: 0 0 30px rgba(255, 78, 203, 0.7);
+}
+
+input::placeholder {
+  color: #888;
+}

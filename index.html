@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 Real-Time Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="light">
+  <div class="container">
+    <h1>🚀 Real-Time Live Dashboard</h1>
+
+    <div class="controls">
+      <select id="api-selector">
+        <option value="coingecko">Bitcoin Price (USD)</option>
+        <option value="weather">Tokyo Temperature (°C)</option>
+        <option value="aqi">Beijing AQI</option>
+        <option value="custom">Advanced: Custom API</option>
+      </select>
+
+      <input id="custom-api" type="text" placeholder="Paste your custom API URL here" style="display:none;" />
+
+      <input id="threshold" type="number" placeholder="Set Threshold Alert" />
+
+      <div class="buttons">
+        <button id="theme-toggle">Toggle Theme 🎨</button>
+        <button id="download">Download CSV 📥</button>
+      </div>
+    </div>
+
+    <canvas id="myChart"></canvas>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
