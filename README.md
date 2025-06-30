@@ -17,7 +17,7 @@ A **dynamic real-time dashboard** using **JavaScript + Chart.js**, displaying li
 
 ## 🌐 Live Demo
 
-[🔗 View Live Dashboard Here](!(https://github.com/user-attachments/assets/66fedc31-d78e-4cff-85cf-c15820121fd2)) 
+[🔗 View Live Dashboard Here](https://github.com/user-attachments/assets/66fedc31-d78e-4cff-85cf-c15820121fd2) 
 
 ---
 
@@ -33,7 +33,8 @@ A **dynamic real-time dashboard** using **JavaScript + Chart.js**, displaying li
 
 ## 📸 Screenshots
 
-![Dashboard Screenshot](!(https://github.com/user-attachments/assets/6b091513-a8a7-4658-8b6c-033602a9a5f0)) 
+![Dashboard Screenshot](https://github.com/user-attachments/assets/6b091513-a8a7-4658-8b6c-033602a9a5f0)
+
 
 ---
 
