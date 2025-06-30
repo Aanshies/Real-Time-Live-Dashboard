@@ -16,12 +16,10 @@ const config = {
     type: 'line',
     data: data,
     options: {
-        animation: {
-            duration: 500
-        },
+        animation: { duration: 500 },
         responsive: true,
         scales: {
-            x: { title: { display: true, text: 'Time' }},
+            x: { title: { display: true, text: 'Time' } },
             y: { title: { display: true, text: 'Value' }, beginAtZero: true }
         }
     }
@@ -36,7 +34,7 @@ const downloadBtn = document.getElementById('download');
 const themeToggle = document.getElementById('theme-toggle');
 
 function getPredefinedAPI(option) {
-    switch(option) {
+    switch (option) {
         case 'coingecko':
             return 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd';
         case 'weather':
@@ -49,6 +47,7 @@ function getPredefinedAPI(option) {
 }
 
 let activeAPI = getPredefinedAPI(apiSelector.value);
+let alertCooldown = false; // prevents repeated alerts during cooldown
 
 apiSelector.addEventListener('change', () => {
     if (apiSelector.value === 'custom') {
@@ -97,7 +96,8 @@ async function fetchDataAndUpdate() {
         setTimeout(() => canvas.classList.remove('update-pulse'), 400);
 
         const threshold = parseFloat(thresholdInput.value);
-        if (!isNaN(threshold) && value > threshold) {
+        if (!isNaN(threshold) && value > threshold && !alertCooldown) {
+            alertCooldown = true;
             Swal.fire({
                 icon: 'warning',
                 title: '🚨 Threshold Alert!',
@@ -105,6 +105,10 @@ async function fetchDataAndUpdate() {
                 confirmButtonColor: '#ff4ecb',
                 background: '#fff0f8'
             });
+            // Cooldown for 15 seconds before allowing next alert
+            setTimeout(() => {
+                alertCooldown = false;
+            }, 15000);
         }
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -121,7 +125,7 @@ function extractFirstNumeric(obj) {
     }
 }
 
-setInterval(fetchDataAndUpdate, 1500); // faster updates for excitement
+setInterval(fetchDataAndUpdate, 1500);
 fetchDataAndUpdate();
 
 themeToggle.addEventListener('click', () => {
