@@ -17,7 +17,7 @@ A **dynamic real-time dashboard** using **JavaScript + Chart.js**, displaying li
 
 ## 🌐 Live Demo
 
-[🔗 View Live Dashboard Here](https://aanshies.github.io/Real-Time-Live-Dashboard/) 
+[🔗 View Live Dashboard Here](https://real-time-live-dashboard.vercel.app/) 
 
 ---
 
