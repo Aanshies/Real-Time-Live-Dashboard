@@ -48,15 +48,16 @@ cd realtime-dashboard
 ```
 2️⃣ **Open index.html directly in your browser.**
 
-✅ No setup or frameworks required.
+✅ No setup or frameworks required.  
 ✅ Works out-of-the-box for demo, learning, or portfolio.
 
 ## 🎯 Why this project?
 
-✅ Demonstrates API integration + data visualization skills.
-✅ Showcases real-time, interactive dashboards with animations.
-✅ Perfect portfolio project for frontend, web, or JavaScript-focused roles.
+✅ Demonstrates API integration + data visualization skills.  
+✅ Showcases real-time, interactive dashboards with animations.  
+✅ Perfect portfolio project for frontend, web, or JavaScript-focused roles.  
 ✅ Easy to extend with WebSocket support or additional metrics.
+
 
 ## ✨ Contributing
 Contributions, feature requests, and improvements are welcome!
